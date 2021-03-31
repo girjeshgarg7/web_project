@@ -1,0 +1,64 @@
+<html>  
+<head>  
+    <link rel = "stylesheet" href = "style.css">   
+    <title>LOGIN PAGE</title>
+</head>  
+<header>
+    <p id="p1">WEAVE THE WEB</p>
+    <div class="navbar">
+        <a href="afterlogin.html">HOME</a>
+        <a href="login.html">LOGIN</a>
+        </div> 
+      </div>
+    
+</header>
+<body>  
+    <div class="pic">
+        <img src="logpic.png"  style="width:50%;">
+    <div id = "frm" class="form">  
+        <h1>Login</h1>  
+        <form >  
+            <p>  
+                <label> UserName: </label>  
+                <input type ="text" id ="user" name="user" />  
+            </p>  
+            <p>  
+                <label> Password: </label>  
+                <input type = "password" id ="pass" name="pass" />  
+            </p>  
+            <p>     
+                <input type =  "button" class = "btn" value ="Login" onclick="validation()" />  
+            </p>  
+        </form>  
+    </div>  
+    </div> 
+    <script>  
+      
+            function validation()  
+            {   var id=document.getElementById("user").value;
+                var ps=document.getElementById("pass").value;
+                 
+                if(id=="user" && ps=="user@123") {  
+                  alert("Thanks for joining");  
+                   window.location = "afterlogin.html";
+                }  
+                else  
+                {  
+                    if(id.length==0 && ps.length==0){
+                    alert("Enter username and password to login");
+                     }
+                    else if(id.length==0) {  
+                        alert("User Name is empty");
+                    }   
+                    else if (ps.length==0) {  
+                    alert("Password field is empty");  
+                    } 
+                    else
+                        alert("enter correct values");
+                    
+                }                          
+            }
+        </script>  
+</body>     
+<footer>Copyright 2021 ,All rights reserved</footer>
+</html>
